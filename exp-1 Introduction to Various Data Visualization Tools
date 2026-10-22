@@ -1,0 +1,23 @@
+Aim:
+To study various data visualization tools and display the installed versions of commonly used Python
+visualization libraries.
+
+Algorithm:
+ Import the required visualization libraries.
+ Display the version of each library.
+ Execute the program.
+ Observe the output.
+
+code:
+ import matplotlib
+ import seaborn
+ import plotly
+ import pandas
+ print("Matplotlib:", matplotlib.__version__)
+ print("Seaborn:", seaborn.__version__)
+ print("Plotly:", plotly.__version__)
+ print("Pandas:", pandas.__version__)
+
+Result:
+
+Thus, the versions of the commonly used Python data visualization libraries were displayed successfully.

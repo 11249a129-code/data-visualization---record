@@ -25,3 +25,32 @@ Program:
  # Save cleaned dataset
  data.to_csv("cleaned_sales_data.csv", index=False)
  print("Data prepared successfully.")
+
+Program Explanation
+• pandas is imported as pd.
+• read csv() loads the CSV dataset.
+• head() displays the first five records.
+• isnull().sum() checks missing values.
+• drop duplicates() removes duplicate rows.
+• to numeric() converts Sales values into numeric form.
+• to csv() saves the cleaned dataset.
+
+Libraries / Functions Used
+Pandas: Used for reading, cleaning, transforming and saving tabular data.
+
+Sample CSV File
+1 OrderID,Product,Category,Sales,Quantity,Region
+2 101,Laptop,Electronics,55000,2,South
+3 102,Mobile,Electronics,20000,3,North
+4 103,Chair,Furniture,5000,5,West
+5 104,Table,Furniture,7000,2,East
+6 105,Headphones,Electronics,3000,4,South
+7 106,Sofa,Furniture,25000,1,North
+
+Sample Output
+The output displays the first five rows, missing-value counts and a confirmation that the cleaned
+dataset was saved successfully.
+
+Result
+Thus, the dataset was successfully connected, cleaned, and prepared for visualization using
+Tableau.

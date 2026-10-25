@@ -1,0 +1,68 @@
+Aim
+To create basic dashboards in Tableau by combining multiple visualizations.
+
+Description
+A dashboard is a collection of multiple visualizations presented in a single screen. Dashboards help
+users compare different aspects of a dataset and understand overall performance quickly.
+
+Uses
+• Combining multiple charts in one view.
+• Monitoring key performance indicators.
+• Comparing categories and regions.
+• Supporting interactive analysis.
+• Presenting information to decision makers.
+
+Algorithm
+1. Open Tableau Public.
+2. Connect to the dataset.
+3. Create multiple worksheets.
+4. Open the Dashboard tab.
+5. Drag sheets into the dashboard.
+6. Add filters and interactive elements.
+7. Arrange the layout properly.
+8. Save the dashboard.
+
+Program
+1 import pandas as pd
+2 import matplotlib.pyplot as plt
+3
+4 # Load dataset
+5 data = pd.read_csv("sales_data.csv")
+6
+7 # Bar chart
+8 data.groupby("Category")["Sales"].sum().plot(kind="bar")
+9 plt.title("Sales by Category")
+10 plt.show()
+11
+12 # Pie chart
+13 data.groupby("Region")["Sales"].sum().plot(
+14 kind="pie", autopct="%1.1f%%")
+15 plt.title("Sales by Region")
+plt.show()
+17
+18 # Line chart
+19 plt.plot(data["Quantity"], data["Sales"])
+20 plt.title("Sales vs Quantity")
+21 plt.xlabel("Quantity")
+22 plt.ylabel("Sales")
+23 plt.show()
+
+Program Explanation
+• The dataset is loaded using Pandas.
+• A bar chart shows sales by category.
+• A pie chart shows the regional contribution to sales.
+• A line chart shows the relationship between quantity and sales.
+• In Tableau, these individual visualizations can be placed together in one dashboard.
+
+Libraries / Functions Used
+• Pandas: Used for data loading and grouping.
+• Matplotlib: Used for creating the sample charts.
+• Tableau: Used to combine visualizations into an interactive dashboard.
+
+Sample Output
+
+The program produces three analytical views which can be combined in Tableau into a single inter-
+active dashboard.
+
+Result
+Thus, a basic dashboard was successfully created in Tableau using multiple visualizations.

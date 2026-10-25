@@ -1,0 +1,65 @@
+Aim
+To create various charts, graphs, and data maps using Tableau for effective data visualization.
+
+Description
+Different chart types are useful for different analytical purposes. Bar charts compare categories,
+pie charts show proportions, line charts show trends, and maps represent geographical information.
+Tableau provides a simple interface for creating these visualizations.
+
+Uses
+• Comparing categories using bar charts.
+• Showing percentage distributions using pie charts.
+• Displaying trends using line charts.
+• Representing geographical information using maps.
+• Communicating business insights clearly.
+
+Algorithm
+1. Open Tableau Public.
+2. Connect to the dataset.
+3. Drag required fields to Rows and Columns.
+4. Select an appropriate chart type.
+5. Customize the visualization.
+6. Analyze and save the visualization.
+
+Program
+1 import pandas as pd
+2 import matplotlib.pyplot as plt
+3
+4 # Load dataset
+5 data = pd.read_csv("sales_data.csv")
+6
+7 # Bar Chart
+8 data.groupby("Category")["Sales"].sum().plot(kind="bar")
+9 plt.title("Sales by Category")
+10 plt.show()
+11
+12 # Pie Chart
+13 data.groupby("Category")["Sales"].sum().plot(
+14 kind="pie", autopct="%1.1f%%")
+15 plt.title("Category Distribution")
+16 plt.show()
+# Line Chart
+19 plt.plot(data["Quantity"], data["Sales"])
+20 plt.title("Sales vs Quantity")
+21 plt.xlabel("Quantity")
+22 plt.ylabel("Sales")
+23 plt.show()
+
+Program Explanation
+• groupby() groups sales according to Category.
+• plot(kind="bar") creates a bar chart.
+• plot(kind="pie") creates a pie chart.
+• autopct displays percentage values in the pie chart.
+• plt.plot() creates a line graph.
+• xlabel() and ylabel() label the axes.
+
+Libraries / Functions Used
+• Pandas: Data loading and grouping.
+• Matplotlib: Chart creation and customization.
+
+Sample Output
+Three visualizations are displayed: sales by category as a bar chart, category distribution as a pie
+chart, and Sales versus Quantity as a line chart.
+
+Result
+Thus, various charts, graphs, and maps were successfully created using Tableau.

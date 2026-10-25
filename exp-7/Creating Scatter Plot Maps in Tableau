@@ -1,0 +1,63 @@
+Aim
+To create scatter plots and map-based visualizations using Tableau.
+
+Description
+A scatter plot displays the relationship between two numerical variables. Tableau can also use
+geographical fields such as city, state, country and region to create map-based visualizations.
+
+Uses
+• Finding relationships between variables.
+• Identifying clusters and unusual values.
+• Comparing sales and quantity.
+• Displaying geographical information.
+• Analyzing regional business performance.
+
+Algorithm
+1. Open Tableau Public.
+2. Connect to the dataset.
+3. Identify geographical and numerical fields.
+4. Drag fields to Rows and Columns.
+5. Select Scatter Plot from Show Me.
+6. Add map features if geographical data is present.
+7. Analyze and save the visualization.
+
+Program
+1 import pandas as pd
+2 import matplotlib.pyplot as plt
+3
+4 # Load dataset
+5 data = pd.read_csv("sales_map_data.csv")
+6
+7 # Scatter plot
+8 plt.scatter(data["Sales"], data["Quantity"])
+9 plt.xlabel("Sales")
+10 plt.ylabel("Quantity")
+11 plt.title("Scatter Plot: Sales vs Quantity")
+12 plt.show()
+
+Program Explanation
+• Pandas loads the CSV file.
+• Matplotlib’s scatter() creates the scatter plot.
+• Sales values are plotted on the X-axis.
+• Quantity values are plotted on the Y-axis.
+• Labels and a title are added to make the graph understandable.
+
+Libraries / Functions Used
+• Pandas: Used for loading and handling the dataset.
+• Matplotlib: Used for creating the scatter plot.
+
+Sample CSV File
+1 City,Region,Sales,Quantity
+2 Hyderabad,South,55000,2
+3 Delhi,North,20000,3
+4 Mumbai,West,30000,4
+5 Chennai,South,25000,2
+6 Kolkata,East,15000,5
+7 Bangalore,South,40000,3
+
+Sample Output
+A scatter plot of Sales versus Quantity is displayed. The same fields can be used in Tableau for
+map-based and geographical analysis.
+
+Result
+Thus, scatter plots and map-based visualizations were successfully created using Tableau.

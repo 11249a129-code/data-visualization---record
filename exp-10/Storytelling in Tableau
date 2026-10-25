@@ -1,0 +1,78 @@
+Aim
+To create a story in Tableau by combining multiple visualizations into a sequence of insights.
+
+Description
+
+Data storytelling is the process of presenting data through a sequence of visualizations and explana-
+tions. Tableau Stories allow users to arrange different visualizations as story points so that viewers
+
+can understand the analysis step by step.
+
+Uses
+• Presenting analytical findings clearly.
+• Explaining trends and patterns step by step.
+• Combining charts into a logical sequence.
+• Supporting business presentations.
+• Communicating insights to non-technical users.
+
+Algorithm
+1. Open Tableau Public.
+2. Connect to the dataset.
+3. Create multiple worksheets.
+4. Create a dashboard if required.
+5. Open the Story tab.
+6. Add story points.
+7. Arrange visualizations sequentially.
+8. Add captions for explanation.
+9. Analyze and save the story.
+
+program
+1 import pandas as pd
+2 import matplotlib.pyplot as plt
+3
+4 # Load dataset
+5 data = pd.read_csv("sales_data.csv")
+6
+7 # STORY STEP 1: Category performance
+8 category_sales = data.groupby("Category")["Sales"].sum()
+9 category_sales.plot(kind="bar")
+10 plt.title("Story 1: Sales by Category")
+11 plt.xlabel("Category")
+12 plt.ylabel("Total Sales")
+13 plt.show()
+14 # STORY STEP 2: Regional contribution
+region_sales = data.groupby("Region")["Sales"].sum()
+17 region_sales.plot(kind="pie", autopct="%1.1f%%")
+18 plt.title("Story 2: Sales by Region")
+19 plt.ylabel("")
+20 plt.show()
+21
+22 # STORY STEP 3: Quantity and sales relationship
+23 plt.scatter(data["Quantity"], data["Sales"])
+24 plt.title("Story 3: Sales vs Quantity")
+25 plt.xlabel("Quantity")
+26 plt.ylabel("Sales")
+27 plt.show()
+28
+29 # Story conclusion
+30 print("Story Created: Category performance, "
+31 "regional distribution, and sales trends analyzed.")
+
+Program Explanation
+• The dataset is loaded using Pandas.
+• Story Step 1: Sales are grouped by category and displayed using a bar chart.
+• Story Step 2: Sales are grouped by region and displayed using a pie chart.
+• Story Step 3: A scatter plot shows the relationship between quantity and sales.
+• The final message indicates that the three analytical views form a complete story.
+
+Libraries / Functions Used
+• Pandas: Used to load, group and analyze the dataset.
+• Matplotlib: Used to create bar, pie and scatter visualizations.
+• Tableau: Used to arrange visualizations into story points and present insights interactively.
+
+Sample Output
+Three story views are displayed: sales by category, sales by region, and the relationship between
+quantity and sales.
+
+Result
+Thus, storytelling was successfully implemented in Tableau to present data insights effectively.
